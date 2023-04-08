@@ -24,3 +24,30 @@ console.log(sum1);
 console.log(mina);
 console.log(seca);
 console.log(typeof(eac[0][0]));
+
+//Added for /n
+
+
+eac ='\n  57:54  56:00\n\n  55:52\n\n  1:03:58\n\n  1:15:44\n\n  35:15\n\n  42:43\n\n  1:24:59\n\n  1:29:54\n\n  1:34:54\n\n  29:12\n\n  38:41\n\n  41:33\n\n  55:35\n\n  1:05:13\n\n  34:29\n\n  2:13\n\n  31:52\n\n  34:04\n\n  1:01:51\n\n  35:38\n\n  33:32\n\n  3:22\n\n  1:53:20\n\n  1:30:36\n\n  44:08\n\n  0:55\n\n  44:11\n\n  1:03:59\n\n  52:52\n\n  47:12\n\n  22:53\n\n  39:23\n\n  37:36\n\n  45:16\n\n  43:14\n\n  36:49\n\n  24:23\n\n  2:32\n\n  37:55\n\n  27:25\n\n  30:42\n\n  21:50\n\n  37:31\n\n  49:23\n\n  1:29:14\n\n  1:35:29\n\n  2:21:18\n\n  52:40\n\n  3:35\n\n  40:08\n\n  50:36\n\n  27:25\n\n  58:44\n\n  22:38\n\n  26:24\n\n  55:08\n\n  27:49\n\n  43:11\n\n  1:35:53\n\n  28:31\n\n  43:54\n\n  37:48\n\n  29:29\n\n  1:05:02\n\n  2:23:55\n\n  55:06\n\n  2:24\n\n  1:01:05\n\n  1:11:31\n\n  59:15\n\n  36:35\n\n  28:28\n\n  31:54\n\n  1:05:47\n\n  37:55\n\n  48:19\n\n  45:58\n\n  23:09\n\n  1:04:56\n\n  1:08:00\n\n  2:51\n\n  50:01\n\n  1:05:15\n\n  1:03:27\n\n  1:20\n\n  48:20\n\n  20:17\n\n  27:04\n\n  31:37\n\n  31:04\n\n  23:10\n\n  33:29\n\n  23:39\n\n  14:18\n\n  32:03\n\n  18:30\n\n  20:09\n\n  17:02\n\n  2:35\n\n  8:23\n\n  19:52\n\n  34:09\n\n  35:55\n\n  33:04\n\n  40:31\n\n  25:13\n\n  29:52\n\n  21:43\n\n  22:06\n\n  37:21\n\n  34:28\n\n  30:36\n\n  20:33\n\n  11:33\n\n  24:39\n\n  26:35\n\n  25:03\n\n  51:19\n\n  17:45\n\n  20:38\n\n  26:17\n\n  17:45\n\n  27:31\n\n  26:08\n\n  50:31\n\n  27:27\n\n  46:24\n\n  16:10\n\n  27:31\n\n  33:19\n\n  27:59\n\n  42:10\n\n  37:42\n\n  11:24\n\n  20:27\n\n  25:03\n\n  26:49\n\n  9:50\n\n  30:05\n\n  20:59\n\n  18:30\n\n  8:26\n\n  22:07\n\n  8:25\n\n  30:03\n\n  13:07\n\n  31:35\n\n  1:29:51\n'
+
+var aditi = eac.replace(/\n'/g,"");
+var riya = eac.split("\n").join("").trim()
+var mahak = riya.split("  ")
+var sum=0;var len=0;var len1=0;
+var teach = [];
+for(var i=0;i<=148;i++){
+     teach.push(mahak[i].split(":"));
+}
+var i=0;
+for(var i=0;i<=148;i++){
+    len1 = (teach[i].length)-1;
+     for(var j=len1;j>=0;j--){
+         len =(teach[i].length)-j-1;
+         sum += Math.pow(60,len)*teach[i][j];
+     } 
+}
+// sum+=Number(eac[i][0]);
+//       sum1+=parseInt(eac[i][1]);
+
+var min =sum/60
+console.log(min/60)
